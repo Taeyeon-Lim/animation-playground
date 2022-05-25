@@ -1,0 +1,11 @@
+// Common variable
+// Color
+$custom-gray: #cccccc;
+$custom-blue: #228be6;
+$custom-pink: #f06595;
+
+:export {
+  customGray: $custom-gray;
+  customBlue: $custom-blue;
+  customPink: $custom-pink;
+}

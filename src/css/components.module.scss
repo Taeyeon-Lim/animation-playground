@@ -1,0 +1,70 @@
+@use './variables.module.scss' as var;
+
+@mixin button-color($color) {
+  background: $color;
+  &:hover {
+    background: adjust-color($color: $color, $lightness: 10%);
+  }
+  &:active {
+    background: adjust-color($color: $color, $lightness: -10%);
+  }
+  &.outline {
+    color: $color;
+    background: none;
+    border: 1px solid $color;
+    &:hover {
+      background: $color;
+      color: white;
+    }
+    &:active {
+      background: adjust-color($color: $color, $lightness: -10%);
+    }
+  }
+}
+
+.suspense-fallback {
+  width: 100%;
+  height: 100%;
+  background: var.$custom-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.large {
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+  &.medium {
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+  &.small {
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
+  &.fullWidth {
+    width: 100%;
+    & + & {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &.blue {
+    @include button-color(var.$custom-blue);
+  }
+  &.pink {
+    @include button-color(var.$custom-pink);
+  }
+  &.gray {
+    @include button-color(var.$custom-gray);
+  }
+}
