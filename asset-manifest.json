@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/animation-playground/static/css/main.5b614580.css",
+    "main.js": "/animation-playground/static/js/main.b330fe3a.js",
+    "static/css/572.fa9af2f2.chunk.css": "/animation-playground/static/css/572.fa9af2f2.chunk.css",
+    "static/js/572.870483fb.chunk.js": "/animation-playground/static/js/572.870483fb.chunk.js",
+    "static/js/787.efe3bbb7.chunk.js": "/animation-playground/static/js/787.efe3bbb7.chunk.js",
+    "index.html": "/animation-playground/index.html",
+    "main.5b614580.css.map": "/animation-playground/static/css/main.5b614580.css.map",
+    "main.b330fe3a.js.map": "/animation-playground/static/js/main.b330fe3a.js.map",
+    "572.fa9af2f2.chunk.css.map": "/animation-playground/static/css/572.fa9af2f2.chunk.css.map",
+    "572.870483fb.chunk.js.map": "/animation-playground/static/js/572.870483fb.chunk.js.map",
+    "787.efe3bbb7.chunk.js.map": "/animation-playground/static/js/787.efe3bbb7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b614580.css",
+    "static/js/main.b330fe3a.js"
+  ]
+}
