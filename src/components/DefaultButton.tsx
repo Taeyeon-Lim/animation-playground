@@ -4,11 +4,14 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
+export type restartBtnSize = 'large' | 'medium' | 'small';
+export type restartBtnColor = 'blue' | 'pink' | 'gray' | 'froly' | 'concrete';
+
 type DefaultButtonProps = {
   name: string;
   onClickButton: () => void;
-  size: 'large' | 'medium' | 'small';
-  color: 'blue' | 'pink' | 'gray';
+  size: restartBtnSize;
+  color: restartBtnColor;
   fullWidth?: boolean;
   outline?: boolean;
 };

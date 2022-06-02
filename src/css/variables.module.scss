@@ -1,11 +1,15 @@
 // Common variable
 // Color
-$custom-gray: #cccccc;
-$custom-blue: #228be6;
-$custom-pink: #f06595;
+$color-blue: #228be6;
+$color-pink: #f06595;
+$color-gray: #cccccc;
+$color-froly: #f26d6d;
+$color-concrete: #f2f2f2;
 
 :export {
-  customGray: $custom-gray;
-  customBlue: $custom-blue;
-  customPink: $custom-pink;
+  color-blue: $color-blue;
+  color-pink: $color-pink;
+  color-gray: $color-gray;
+  color-froly: $color-froly;
+  color-concrete: $color-concrete;
 }

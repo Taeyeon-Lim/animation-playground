@@ -14,26 +14,24 @@
     border: 1px solid $color;
     &:hover {
       background: $color;
-      color: white;
+      color: #ffffff;
     }
     &:active {
       background: adjust-color($color: $color, $lightness: -10%);
     }
   }
 }
-
-.suspense-fallback {
-  width: 100%;
-  height: 100%;
-  background: var.$custom-gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+a {
+  color: #000000;
 }
-
+button {
+  color: #ffffff;
+}
+a,
 button {
   outline: none;
   border: none;
+  text-decoration: none;
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 4px;
@@ -59,12 +57,91 @@ button {
   }
 
   &.blue {
-    @include button-color(var.$custom-blue);
+    @include button-color(var.$color-blue);
   }
   &.pink {
-    @include button-color(var.$custom-pink);
+    @include button-color(var.$color-pink);
   }
   &.gray {
-    @include button-color(var.$custom-gray);
+    @include button-color(var.$color-gray);
+  }
+  &.froly {
+    @include button-color(var.$color-froly);
+  }
+  &.concrete {
+    @include button-color(var.$color-concrete);
+  }
+}
+
+input[type='text'] {
+  width: 100px;
+  height: 27.5px;
+  border: 0;
+  padding: 2.5px 7.5px 0 7.5px;
+  border-bottom: solid 1px var.$color-gray;
+  color: #000000;
+  line-height: -10%;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.05);
+  }
+}
+
+// SuspenseFallBack component
+.suspense-fallback {
+  width: 100%;
+  height: 100%;
+  background: var.$color-concrete;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// PagesTemplate component
+.container {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+
+  & .main_contents {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+
+  & section {
+    &.menu {
+      //   width: 100%;
+      height: 50px;
+      background-color: var.$color-froly;
+      color: white;
+      position: sticky;
+      bottom: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 1rem 0;
+      gap: 1rem;
+
+      & .menu_icon {
+        padding-right: 1rem;
+
+        & a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffffff;
+        }
+      }
+
+      & a {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-radius: 10px;
+      }
+    }
   }
 }

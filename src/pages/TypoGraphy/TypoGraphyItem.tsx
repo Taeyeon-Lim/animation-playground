@@ -2,20 +2,26 @@ import React, { useRef } from 'react';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 import DefaultButton from '../../components/DefaultButton';
+import {
+  restartBtnColor,
+  restartBtnSize,
+} from '../../components/DefaultButton';
 
 const cx = classNames.bind(styles);
 
-type TypeGraphyProps = {
+type TypeGraphyItemProps = {
   title: string;
   fontSize: number;
   stroke: string;
   viewBox: string;
   dy: string;
-  restartBtnSize: 'large' | 'medium' | 'small';
-  restartBtnColor: 'blue' | 'pink' | 'gray';
+  restartBtnSize: restartBtnSize;
+  restartBtnColor: restartBtnColor;
+  // onChangeSetting: (type: 'stroke' | 'size' | 'color', text: string) => void;
+  children?: React.ReactNode;
 };
 
-function TypoGraphy({
+function TypoGraphyItem({
   title,
   fontSize,
   stroke,
@@ -23,8 +29,11 @@ function TypoGraphy({
   dy,
   restartBtnSize,
   restartBtnColor,
-}: TypeGraphyProps) {
+  // onChangeSetting,
+  children,
+}: TypeGraphyItemProps) {
   const textRef = useRef<SVGTextElement>(null);
+
   const reAnimation = () => {
     const element = textRef.current;
     if (element) {
@@ -36,8 +45,8 @@ function TypoGraphy({
   };
 
   return (
-    <>
-      <svg viewBox={viewBox} className={cx('typo-graphy')}>
+    <div className={cx('typo_graphy-group')}>
+      <svg viewBox={viewBox} className={cx('typo_graphy')}>
         <title>{title}</title>
         <g stroke='none' fill='none' fillRule='evenodd' fillOpacity='0'>
           <text
@@ -56,20 +65,23 @@ function TypoGraphy({
             // textDecoration='underline' underline | line-through
           >
             {title.split('').map((char: string, index: number) => (
-              <tspan key={char + index}>{char}</tspan>
+              <tspan key={title + char + index}>{char}</tspan>
             ))}
           </text>
         </g>
       </svg>
-      <DefaultButton
-        name={`ReStart [${title.slice(-3, -1)} ] 재실행`}
-        onClickButton={reAnimation}
-        size={restartBtnSize}
-        color={restartBtnColor}
-        outline
-      />
-    </>
+      <div className={cx('typo_button_group')}>
+        <DefaultButton
+          name={`ReStart`}
+          onClickButton={reAnimation}
+          size={restartBtnSize}
+          color={restartBtnColor}
+          outline
+        />
+        {children}
+      </div>
+    </div>
   );
 }
 
-export default TypoGraphy;
+export default TypoGraphyItem;

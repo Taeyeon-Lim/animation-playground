@@ -1,0 +1,62 @@
+@use '../../css/variables.module.scss' as var;
+
+$typoLength: 25; // 프로덕트의 모든 typoGrapy의 최대 길이
+
+.typo_graphy-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  & .typo_graphy-group {
+    max-width: 100rem;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+
+    svg {
+      user-select: none;
+      &.typo_graphy {
+        width: 100%;
+        height: 75%;
+        fill: none;
+        stroke-width: 4;
+
+        tspan {
+          stroke-dasharray: 1500;
+          stroke-dashoffset: -1500;
+
+          @for $i from 1 through $typoLength {
+            &:nth-of-type(#{$i}) {
+              animation: draw 500ms #{$i * 150}ms forwards;
+            }
+          }
+        }
+      }
+
+      @keyframes draw {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+
+    & .typo_button_group {
+      height: 25%;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  }
+}
