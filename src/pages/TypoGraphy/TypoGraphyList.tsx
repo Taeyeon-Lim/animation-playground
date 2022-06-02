@@ -20,7 +20,7 @@ type TypoListSettingsType = {
 function TypoGraphyList() {
   const [typoListSettings, setTypoListSettings] =
     useState<TypoListSettingsType>({
-      stroke: styles.colorBlue,
+      stroke: styles['color-blue'],
       size: 'large',
       color: 'blue',
     });
