@@ -1,5 +1,4 @@
-import React, { Suspense, useState } from 'react';
-import classNames from 'classnames/bind';
+import React, { Suspense } from 'react';
 import PagesTemplate from '../../components/PagesTemplate';
 
 // const cx = classNames.bind(styles);
