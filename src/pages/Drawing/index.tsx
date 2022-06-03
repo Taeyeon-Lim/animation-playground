@@ -1,12 +1,15 @@
 import React, { Suspense } from 'react';
 import PagesTemplate from '../../components/PagesTemplate';
+import DrawingCanvas from './DrawingCanvas';
 
-function Main() {
+function Drawing() {
   return (
     <Suspense fallback={<>Loading...</>}>
-      <PagesTemplate>메인페이지</PagesTemplate>
+      <PagesTemplate>
+        <DrawingCanvas />
+      </PagesTemplate>
     </Suspense>
   );
 }
 
-export default Main;
+export default Drawing;

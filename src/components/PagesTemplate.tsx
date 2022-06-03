@@ -28,8 +28,13 @@ function PagesTemplate({ children }: PagesTemplateProps) {
           </Link>
         </aside>
         <aside>
-          <Link to='/typoGraphy' className={cx('typoGraphy', 'concrete')}>
+          <Link to='/typoGraphy' className={cx('concrete')}>
             TypoGraphy
+          </Link>
+        </aside>
+        <aside>
+          <Link to='/drawing' className={cx('concrete')}>
+            Drawing
           </Link>
         </aside>
         <aside>...next</aside>

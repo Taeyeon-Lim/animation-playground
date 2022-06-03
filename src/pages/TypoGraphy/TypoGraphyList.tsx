@@ -43,6 +43,7 @@ function TypoGraphyList() {
       >
         {sizeSet.map(size => (
           <DefaultButton
+            key={'button' + size}
             name={size}
             onClickButton={() => onChangeSetting('size', size)}
             size={typoListSettings.size}
@@ -51,6 +52,7 @@ function TypoGraphyList() {
         ))}
         {palette.map(color => (
           <DefaultButton
+            key={'button' + color}
             name={color}
             onClickButton={() => {
               onChangeSetting('color', color);

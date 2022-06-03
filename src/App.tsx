@@ -5,6 +5,7 @@ import SuspenseFallBack from './components/SuspenseFallBack';
 
 const Main = lazy(() => import('./pages/Main'));
 const TypoGraphy = lazy(() => import('./pages/TypoGraphy'));
+const Drawing = lazy(() => import('./pages/Drawing'));
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/typoGraphy' element={<TypoGraphy />} />
+        <Route path='/drawing' element={<Drawing />} />
         <Route path='*' element={<Main />} />
       </Routes>
     </Suspense>
