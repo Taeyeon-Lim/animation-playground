@@ -1,23 +1,31 @@
 {
   "files": {
-    "main.css": "/animation-playground/static/css/main.a02e9082.css",
-    "main.js": "/animation-playground/static/js/main.c1f8a685.js",
-    "static/js/175.33868ff2.chunk.js": "/animation-playground/static/js/175.33868ff2.chunk.js",
-    "static/css/824.3d378e1c.chunk.css": "/animation-playground/static/css/824.3d378e1c.chunk.css",
-    "static/js/824.1fdfc5d6.chunk.js": "/animation-playground/static/js/824.1fdfc5d6.chunk.js",
+    "main.css": "/animation-playground/static/css/main.b11fea60.css",
+    "main.js": "/animation-playground/static/js/main.7d417f1e.js",
+    "static/css/817.844f4e25.chunk.css": "/animation-playground/static/css/817.844f4e25.chunk.css",
+    "static/js/817.c4f39e21.chunk.js": "/animation-playground/static/js/817.c4f39e21.chunk.js",
+    "static/css/683.c7bf3123.chunk.css": "/animation-playground/static/css/683.c7bf3123.chunk.css",
+    "static/js/683.6f98658e.chunk.js": "/animation-playground/static/js/683.6f98658e.chunk.js",
+    "static/css/660.2544c43a.chunk.css": "/animation-playground/static/css/660.2544c43a.chunk.css",
+    "static/js/660.480eda5f.chunk.js": "/animation-playground/static/js/660.480eda5f.chunk.js",
     "static/js/787.efe3bbb7.chunk.js": "/animation-playground/static/js/787.efe3bbb7.chunk.js",
-    "static/js/358.1b1a5eac.chunk.js": "/animation-playground/static/js/358.1b1a5eac.chunk.js",
+    "static/js/53.6dc678e1.chunk.js": "/animation-playground/static/js/53.6dc678e1.chunk.js",
+    "static/js/14.c5b1e26c.chunk.js": "/animation-playground/static/js/14.c5b1e26c.chunk.js",
     "index.html": "/animation-playground/index.html",
-    "main.a02e9082.css.map": "/animation-playground/static/css/main.a02e9082.css.map",
-    "main.c1f8a685.js.map": "/animation-playground/static/js/main.c1f8a685.js.map",
-    "175.33868ff2.chunk.js.map": "/animation-playground/static/js/175.33868ff2.chunk.js.map",
-    "824.3d378e1c.chunk.css.map": "/animation-playground/static/css/824.3d378e1c.chunk.css.map",
-    "824.1fdfc5d6.chunk.js.map": "/animation-playground/static/js/824.1fdfc5d6.chunk.js.map",
+    "main.b11fea60.css.map": "/animation-playground/static/css/main.b11fea60.css.map",
+    "main.7d417f1e.js.map": "/animation-playground/static/js/main.7d417f1e.js.map",
+    "817.844f4e25.chunk.css.map": "/animation-playground/static/css/817.844f4e25.chunk.css.map",
+    "817.c4f39e21.chunk.js.map": "/animation-playground/static/js/817.c4f39e21.chunk.js.map",
+    "683.c7bf3123.chunk.css.map": "/animation-playground/static/css/683.c7bf3123.chunk.css.map",
+    "683.6f98658e.chunk.js.map": "/animation-playground/static/js/683.6f98658e.chunk.js.map",
+    "660.2544c43a.chunk.css.map": "/animation-playground/static/css/660.2544c43a.chunk.css.map",
+    "660.480eda5f.chunk.js.map": "/animation-playground/static/js/660.480eda5f.chunk.js.map",
     "787.efe3bbb7.chunk.js.map": "/animation-playground/static/js/787.efe3bbb7.chunk.js.map",
-    "358.1b1a5eac.chunk.js.map": "/animation-playground/static/js/358.1b1a5eac.chunk.js.map"
+    "53.6dc678e1.chunk.js.map": "/animation-playground/static/js/53.6dc678e1.chunk.js.map",
+    "14.c5b1e26c.chunk.js.map": "/animation-playground/static/js/14.c5b1e26c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a02e9082.css",
-    "static/js/main.c1f8a685.js"
+    "static/css/main.b11fea60.css",
+    "static/js/main.7d417f1e.js"
   ]
 }
