@@ -38,8 +38,8 @@ function DrawingCanvas() {
     if (!canvasRef.current) return;
     const canvas: HTMLCanvasElement = canvasRef.current;
     return {
-      x: event.pageX - canvas.offsetLeft,
-      y: event.pageY - canvas.offsetTop,
+      x: event.pageX - canvas.offsetLeft - 10,
+      y: event.pageY - canvas.offsetTop + 14,
     };
   };
 
@@ -64,7 +64,7 @@ function DrawingCanvas() {
     }
   };
 
-  // 페인팅 시작
+  // mouse painting
   const startPaint = useCallback((event: MouseEvent) => {
     const coordinates = getCoordinates(event);
 
@@ -73,19 +73,6 @@ function DrawingCanvas() {
       setMousePosition(coordinates);
     }
   }, []);
-  const startTouch = useCallback((event: TouchEvent) => {
-    event.preventDefault();
-    if (!canvasRef.current) return;
-    const canvas: HTMLCanvasElement = canvasRef.current;
-    const touch = event.touches[0]; // touch 좌표
-    const mouseEvent = new MouseEvent('mousedown', {
-      clientX: touch.clientX,
-      clientY: touch.clientY,
-    });
-    canvas.dispatchEvent(mouseEvent);
-  }, []);
-
-  // 페인팅
   const paint = useCallback(
     (event: MouseEvent) => {
       event.preventDefault();
@@ -101,6 +88,20 @@ function DrawingCanvas() {
     },
     [mousePosition, isPainting]
   );
+  const endPaint = useCallback(() => setIsPainting(false), []);
+
+  // touch painting
+  const startTouch = useCallback((event: TouchEvent) => {
+    event.preventDefault();
+    if (!canvasRef.current) return;
+    const canvas: HTMLCanvasElement = canvasRef.current;
+    const touch = event.touches[0]; // 터치 좌표
+    const mouseEvent = new MouseEvent('mousedown', {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+    });
+    canvas.dispatchEvent(mouseEvent);
+  }, []);
   const touch = useCallback((event: TouchEvent) => {
     event.preventDefault();
     event.stopPropagation();
@@ -114,9 +115,6 @@ function DrawingCanvas() {
     });
     canvas.dispatchEvent(mouseEvent);
   }, []);
-
-  // 페인팅 종료
-  const endPaint = useCallback(() => setIsPainting(false), []);
   const endTouch = useCallback((event: TouchEvent) => {
     event.preventDefault();
     if (!canvasRef.current) return;
@@ -133,10 +131,12 @@ function DrawingCanvas() {
     canvas.getContext('2d')!!.clearRect(0, 0, canvas.width, canvas.height);
   };
 
+  // 캔버스 크기 초기화
   useEffect(() => {
-    resize(); // 캔버스 크기 초기화
+    resize();
   }, []);
 
+  // 이벤트 핸들링
   useEffect(() => {
     if (!canvasRef.current) return;
     const canvas: HTMLCanvasElement = canvasRef.current;
@@ -165,7 +165,7 @@ function DrawingCanvas() {
     <div className={cx('canvas_section')}>
       <div className={cx('draw_button_group')}>
         <DefaultButton
-          name={'Reset'}
+          name={'Click or Touch'}
           onClickButton={clearPaint}
           size={'large'}
           color={'blue'}
