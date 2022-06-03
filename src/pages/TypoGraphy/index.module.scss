@@ -18,7 +18,7 @@ $typoLength: 25; // 프로덕트의 모든 typoGrapy의 최대 길이
   &::-webkit-scrollbar-thumb {
     display: none;
   }
-
+  // TypoGrphyItem.tsx
   & .typo_graphy-group {
     max-width: 100rem;
     width: 100%;
@@ -55,6 +55,8 @@ $typoLength: 25; // 프로덕트의 모든 typoGrapy의 최대 길이
     & .typo_button_group {
       height: 25%;
       display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
       justify-content: center;
       gap: 0.5rem;
     }
