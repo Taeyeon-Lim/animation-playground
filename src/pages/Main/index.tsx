@@ -34,7 +34,6 @@ function Main() {
           <GiMoonOrbit onClick={nextColor} />
           <span>{palette[colorNumbering]}</span>
         </div>
-        <SuspenseFallBack />
       </PagesTemplate>
     </Suspense>
   );

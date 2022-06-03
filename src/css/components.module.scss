@@ -93,11 +93,18 @@ input[type='text'] {
 .suspense-fallback {
   width: 100%;
   height: 100%;
-  background: var.$color-concrete;
+  background: var.$color-gray;
   font-size: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  & svg {
+    width: 50%;
+    max-width: 5rem;
+    height: auto;
+    cursor: wait;
+  }
 }
 
 // PagesTemplate component
