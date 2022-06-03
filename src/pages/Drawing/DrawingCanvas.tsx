@@ -67,7 +67,7 @@ function DrawingCanvas() {
   // mouse painting
   const startPaint = useCallback((event: MouseEvent) => {
     const coordinates = getCoordinates(event);
-
+    // elementBlur()
     if (coordinates) {
       setIsPainting(true);
       setMousePosition(coordinates);
@@ -93,6 +93,7 @@ function DrawingCanvas() {
   // touch painting
   const startTouch = useCallback((event: TouchEvent) => {
     event.preventDefault();
+    // elementBlur()
     if (!canvasRef.current) return;
     const canvas: HTMLCanvasElement = canvasRef.current;
     const touch = event.touches[0]; // 터치 좌표
@@ -130,6 +131,10 @@ function DrawingCanvas() {
     const canvas: HTMLCanvasElement = canvasRef.current;
     canvas.getContext('2d')!!.clearRect(0, 0, canvas.width, canvas.height);
   };
+
+  // const elementBlur = () => {
+  //   (document.activeElement as HTMLElement).blur()
+  // }
 
   // 캔버스 크기 초기화
   useEffect(() => {
